@@ -23,7 +23,8 @@ const userSchema = new mongoose.Schema({
     },
     bio: {
         type: String,
-        maxLength: 160 // Limit to typical social media bio length
+        maxLength: 160, // Limit to typical social media bio length
+        default:""
     },
     followers: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
     following: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
