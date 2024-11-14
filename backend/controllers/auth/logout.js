@@ -1,7 +1,10 @@
 
+
 export default async function logout (req, res)  {
 try{
-    res.cookie('token', '')
+
+    res.clearCookie("token");
+    res.status(200).send({message:` user logged out successfully`});
 }
 catch(error){
     console.log(error);

@@ -4,7 +4,7 @@ export default async function generateTokenAndCookie(res, user) {
     try {
         // Generate the JWT token
 
-        const token = jwt.sign({user}, "secretkey", { expiresIn: "1h" });
+        const token = jwt.sign({user}, "secretkey", { expiresIn:'1hr'});
 
         // Set the cookie with the token
         res.cookie('token', user, {

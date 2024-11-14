@@ -5,7 +5,6 @@ export default async function signup(req, res) {
 
     try {
 
-
         const {email, password, username} = req.body;
         const comprehensiveEmailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
         const validEmail = comprehensiveEmailRegex.test(email);
