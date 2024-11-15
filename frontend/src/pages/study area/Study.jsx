@@ -9,6 +9,9 @@ const Study = () => {
                 <Navbar/>
 
 <div className=" w-screen p-8 overflow-y-auto">
+<div>
+    <button className="border px-2 py-3 rounded-lg active:scale-90 duration-200 transition-all"> show answer</button>
+</div>
 <div className="m-3">
    <p className="font-bold text-2xl text-center">what is this </p>
 </div>
@@ -16,9 +19,7 @@ const Study = () => {
 <div className="col-span-3 lg:h-3/4 ">
 
                 <CodeEditor />
-    <div className="flex justify-center">
-        <button>show answer</button>
-    </div>
+    
 </div>
         <div className="col-span-2 h-3/4 w-full">
             <CodeEditor />
