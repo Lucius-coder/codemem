@@ -1,4 +1,4 @@
-import {Home, Plus, SearchIcon, Settings} from "lucide-react";
+import {SearchIcon} from "lucide-react";
 import IconButton from "./components/IconButton.jsx";
 import Card from "./components/Card.jsx";
 import Navbar from "./components/Navbar.jsx";
@@ -13,10 +13,10 @@ const App = () => {
                 <div className=" flex justify-center p-2 w-md items-center">
 
                     <input type="text" placeholder="search subjects "
-                           className=" lg:w-1/2 w-3/4 pl-5 py-2 rounded-3xl border-none bg-none"/>
+                           className=" lg:w-1/2 w-3/4 pl-5 py-2 rounded-3xl border-none "/>
                     <IconButton Component={SearchIcon}/>
                 </div>
-                <div className="md:grid grid-cols-5 grid-flow-dense w-full gap-3  p-5">
+                <div className="md:grid grid-cols-4 grid-flow-dense w-full gap-3  p-5">
                     <Card cardName={"Mathematics and physics"} New={1} learnt={2} due={3}/>
                     <Card cardName={"Science"} New={1} learnt={2} due={3}/>
                     <Card cardName={"English"} New={1} learnt={2} due={3}/>
