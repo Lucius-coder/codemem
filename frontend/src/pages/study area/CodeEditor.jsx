@@ -1,12 +1,9 @@
 import {Editor} from "@monaco-editor/react";
-import React from 'react';
-
-const Editor = () => {
+const CodeEditor = () => {
     return (
-        <div>
-            <Editor height="90vh" width="100%" language="javascript" theme="vs-dark" value="console.log('Hello world!')" />
-        </div>
-    );
+            <Editor height="100%" width="100%" language="javascript" theme="vs-dark"
+                    value="console.log('Hello world!')" />
+        );
 };
 
-export default Editor;
+export default CodeEditor;

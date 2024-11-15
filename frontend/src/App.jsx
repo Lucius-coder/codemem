@@ -1,35 +1,32 @@
-import {Home, Plus, Settings} from "lucide-react";
+import {Home, Plus, SearchIcon, Settings} from "lucide-react";
 import IconButton from "./components/IconButton.jsx";
 import Card from "./components/Card.jsx";
+import Navbar from "./components/Navbar.jsx";
 
 const App = () => {
 
     return (
-        <div className=" inline-flex h-screen w-screen ">
-            <div className="flex">
-                <div
-                    className=" bg-white border-r-2 dark:bg-[rgba(0,0,0,.2)] max-w-sm  p-4 h-screen flex flex-col justify-start items-center gap-3">
-                    <div className="flex flex-col gap-[1.2rem] mt-[2rem] items-center">
-                        <IconButton Component={Home}/>
-                        <IconButton Component={Plus}/>
-                        <IconButton Component={Settings}/>
-                    </div>
+        <div className=" inline-flex h-screen w-full ">
+            <Navbar/>
+            <div className="overflow-y-auto mx-auto dark:bg-[#212121] p-3 justify-center">
+
+                <div className=" flex justify-center p-2 w-md items-center">
+
+                    <input type="text" placeholder="search subjects "
+                           className=" lg:w-1/2 w-3/4 pl-5 py-2 rounded-3xl border-none bg-none"/>
+                    <IconButton Component={SearchIcon}/>
                 </div>
-            </div>
-            <div className="overflow-y-auto w-screen  dark:bg-[#212121] ">
-                <div className="md:grid grid-cols-8 grid-flow-row-dense w-full gap-4 p-4 ">
-                    <Card cardName={"Card 1 aljfaljdflajfdflajslf"} New={1} learnt={2} due={3} classes={"col-span-5"}/>
+                <div className="md:grid grid-cols-5 grid-flow-dense w-full gap-3  p-5">
+                    <Card cardName={"Mathematics and physics"} New={1} learnt={2} due={3}/>
+                    <Card cardName={"Science"} New={1} learnt={2} due={3}/>
+                    <Card cardName={"English"} New={1} learnt={2} due={3}/>
+                    <Card cardName={"Computer Hardware fundamentals"} New={1} learnt={2} due={3}/>
+                    <Card cardName={"Digital design and circuits"} New={1} learnt={2} due={3}/>
                     <Card cardName={"Card 1"} New={1} learnt={2} due={3}/>
-                    <Card cardName={"Card 1"} New={1} learnt={2} due={3}/>
-                    <Card cardName={"Card 1"} New={1} learnt={2} due={3}/>
-                    <Card cardName={"Card 1"} New={1} learnt={2} due={3}/>
-                    <Card cardName={"Card 1"} New={1} learnt={2} due={3}/>
-                    <Card cardName={"Card 1"} New={1} learnt={2} due={3}/>
-                    <Card cardName={"Card 1"} New={1} learnt={2} due={3}/>
-                    <Card cardName={"Card 1"} New={1} learnt={2} due={3}/>
-                    <Card cardName={"Card 1"} New={1} learnt={2} due={3}/>
-                    <Card cardName={"Card 1"} New={1} learnt={2} due={3}/>
-                    <Card cardName={"Card 1"} New={1} learnt={2} due={3}/>
+                    <Card cardName={"social studies and math and explanation and fantaliss"} New={1} learnt={2}
+                          due={3}/>
+                    <Card cardName={"social studies"} New={1} learnt={2} due={3}/>
+
                 </div>
 
             </div>
