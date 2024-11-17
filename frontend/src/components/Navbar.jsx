@@ -14,7 +14,7 @@ const Navbar = () => {
                     {/* Navigation buttons */}
                     <IconButton Component={Home} title="dashboard" />
                     <IconButton Component={Plus} title="create" />
-                    <IconButton Component={UploadIcon} />
+                    <IconButton Component={UploadIcon} title="upload json"/>
                 </div>
 
                 {/* Bottom section of the navigation bar */}

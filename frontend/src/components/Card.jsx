@@ -1,4 +1,5 @@
 import {useRef} from "react"; // Importing useRef from React library
+import PropTypes from 'prop-types'; // Importing prop-types library for prop validation
 import IconButton from "./IconButton.jsx"; // Importing IconButton component
 import {EllipsisVerticalIcon} from "lucide-react";
 import {useNavigate} from "react-router-dom"; // Importing EllipsisVerticalIcon from lucide-react package
@@ -27,12 +28,12 @@ return Link("/study/"+cardName)
 }
     // Returning the JSX for the Card component
     return (
-        <div className={ `${classes} w-full justify-center dark:bg-[rgba(0,0,0,0.2)] m-4 bg-white rounded-md active:scale-90 active:rounded-2xl transition duration-200`} ref={card} onClick={()=>handleRoute(cardName)}>
+        <div className={ `${classes} w-full justify-center  dark:bg-[rgba(0,0,0,0.2)] m-4 bg-white rounded-md active:scale-90 active:rounded-2xl transition duration-200 h-full`} ref={card} onClick={()=>handleRoute(cardName)}>
             <div
-                className={``}>
+                className={`flex flex-col justify-center h-full `}>
                 {/* Displaying the card name */}
                 <div className="font-bold text-2xl m-2 p-4 mx-auto">{cardName}</div>
-                <div className="flex justify-between px-3 py-5">
+                <div className="flex justify-between px-3 py-5 ">
                     <div className="flex flex-col items-center">
                         {/* Displaying the number of new items */}
                         <span>New</span> <span className="text-blue-500">{New}</span>
@@ -53,6 +54,13 @@ return Link("/study/"+cardName)
             </div>
         </div>
     );
+};
+
+Card.propTypes = {
+    cardName: PropTypes.string.isRequired,
+    due: PropTypes.number.isRequired,
+    learnt: PropTypes.number.isRequired,
+    New: PropTypes.number.isRequired,
 };
 
 export default Card; // Exporting the Card component as default

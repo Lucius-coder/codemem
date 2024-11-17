@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
+import PropTypes from 'prop-types';
 
 const ToggleSwitch = ({ label }) => {
   const [isToggled, setIsToggled] = useState(false);
@@ -11,7 +12,7 @@ const ToggleSwitch = ({ label }) => {
     <div className="flex items-center">
       <span className="mr-2">{label}</span>
       <div
-        className={`w-14 h-8 flex items-center bg-gray-300 rounded-full p-1 cursor-pointer ${isToggled ? 'bg-blue-600' : ''
+        className={`w-14 h-8 flex items-center bg-gray-300 rounded-full p-1 cursor-pointer ${isToggled ? 'bg-blue-500' : ''
           }`}
         onClick={handleToggle}
       >
@@ -21,6 +22,10 @@ const ToggleSwitch = ({ label }) => {
       </div>
     </div>
   );
+};
+
+ToggleSwitch.propTypes = {
+  label: PropTypes.string.isRequired,
 };
 
 export default ToggleSwitch;
