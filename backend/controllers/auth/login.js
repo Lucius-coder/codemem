@@ -26,13 +26,12 @@ const userCredentials=await checkUser(username,email);
         const userFromDb = await sql`SELECT *
                                      FROM users
                                      WHERE email = ${email}`;
-        const token = await generateTokenAndCookie(res, userFromDb);
+        const token = await generateTokenAndCookie(res, userFromDb[0]);
+
         return res.status(200).json({
             message: "Login successful",
-            userFromDb,
-            token,
+            userFromDb
         });
-
     } catch (e) {
         console.log(e);
         res.status(500).send({message: "Internal server error", error: e.message});

@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser"
 import authRoutes from "./routes/auth.routes.js";
 import decksRoutes from "./routes/decks.routes.js";
 import dotenv from "dotenv";
+import protectRoute from "./middleware/ProtectRoute.js";
 dotenv.config();
 const app=express()
 app.use(cors())

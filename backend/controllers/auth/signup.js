@@ -39,8 +39,8 @@ export default async function signup(req, res) {
     const salt = await bcrypt.genSalt(12);
     const hashedPassword = await bcrypt.hash(password, salt);
     const newUser = await sql`INSERT INTO users (name, email, password) VALUES (${username}, ${email}, ${hashedPassword})`;
-    const userFromDb = await sql`SELECT name,email FROM users WHERE name = ${username} and email = ${email}`;
-    const tk=await generateTokenAndCookie(res,userFromDb)
+    const userFromDb = await sql`SELECT name,email,id FROM users WHERE name = ${username} and email = ${email}`;
+    const tk=await generateTokenAndCookie(res,userFromDb[0])
     if (newUser) {
         return res.status(201).json({
             message: "User created successfully"

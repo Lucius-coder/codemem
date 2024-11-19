@@ -8,11 +8,15 @@ export default async function generateTokenAndCookie(res, user) {
         // Set the cookie with the token
         res.cookie('token', token, {
             maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in milliseconds
-            httpOnly: true,
-            secure:process.env.NODE_ENV !== "development",
-            sameSite:"none"// Can also be 'Strict' or 'None' if needed for cross-origin requests
+            httpOnly: true, // Prevents client-side JavaScript from accessing the cookie
+            secure: process.env.NODE_ENV ==="production",// Ensures the cookie is only sent over HTTPS in production
+            sameSite: "None",
+
 
         });
+        
+
+
         return token;
     } catch (error) {
         console.log(error);
