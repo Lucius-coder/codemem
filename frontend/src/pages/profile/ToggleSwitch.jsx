@@ -17,7 +17,7 @@ const ToggleSwitch = ({ label }) => {
         onClick={handleToggle}
       >
         <div
-          className={`bg-white w-6 h-6 rounded-full shadow-md transform duration-300 ease-in-out ${isToggled ? 'translate-x-6' : ''}`}
+          className={`bg-white w-6 h-6 rounded-full shadow-md transform duration-300 ease-in-out ${isToggled ? 'translate-x-6 bg-blue-500' : ''}`}
         ></div>
       </div>
     </div>

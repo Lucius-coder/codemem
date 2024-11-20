@@ -10,12 +10,15 @@ export default async function login(req, res) {
 
 
         if (!username|| !email || !password) {
-            return res.status(400).send({message: "Please provide email and password"});
+            return res.status(400).send({message: "all fields must be filled"});
         }
-const userCredentials=await checkUser(username,email);
-        if (userCredentials.length ===0) {
+        if(!emailRegex.test(email)) {
+            return res.status(400).json({message: "email  must be a valid email"});
+        }
+const userCredentials=await sql `select * from users where email=${email}  or name =${username}`;
+        if (!userCredentials.length) {
             return res.status(400).send({
-                message: "Username or password does not exist. We recommend you to sign up.", userCredentials
+                message: "Username or email does not exist. We recommend you to sign up.", userCredentials
             });
         }
 

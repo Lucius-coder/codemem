@@ -2,10 +2,13 @@ import {SearchIcon} from "lucide-react"; // Importing the SearchIcon component f
 import IconButton from "./components/IconButton.jsx"; // Importing the IconButton component from a local file
 import Card from "./components/Card.jsx"; // Importing the Card component from a local file
 import Navbar from "./components/Navbar.jsx";
+import {useEffect} from "react";
 
 // The main App component
 const App = () => {
+useEffect(() => {
 
+})
     // Rendering the main layout
     return (
         <div className="inline-flex h-screen w-full">
@@ -26,13 +29,7 @@ const App = () => {
                 <div className="md:grid grid-cols-4 grid-flow-dense w-full gap-2 p-5">
                     {/* Multiple Card components with different subjects */}
                     <Card cardName={"Mathematics and  biology"} New={1} learnt={2} due={3}/>
-                    <Card cardName={"Mathematics and physics"} New={1} learnt={2} due={3}/>
-                    <Card cardName={"Mathematics and physics"} New={1} learnt={2} due={3}/>
-                    <Card cardName={"Science"} New={1} learnt={2} due={3}/>
-                    <Card cardName={"Mathematics and physics"} New={1} learnt={2} due={3}/>
-                    <Card cardName={"English"} New={1} learnt={2} due={3}/>
-                    <Card cardName={"English"} New={1} learnt={2} due={3}/>
-                    <Card cardName={"English"} New={1} learnt={2} due={3}/>
+
 
                 </div>
             </div>

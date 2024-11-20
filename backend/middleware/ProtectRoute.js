@@ -26,6 +26,7 @@ console.log(token)
 
         req.user = user
         console.log(req.user[0].id)
+        
         next();
 
     }catch (e){

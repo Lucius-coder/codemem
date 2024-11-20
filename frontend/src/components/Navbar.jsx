@@ -1,5 +1,5 @@
 import IconButton from "./IconButton.jsx";
-import {Home, Plus, UploadIcon, UserRoundCogIcon} from "lucide-react";
+import {EditIcon, Home, Plus, UploadIcon, UserRoundCogIcon} from "lucide-react";
 
 // The Navbar component definition
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
                     {/* Navigation buttons */}
                     <IconButton Component={Home} title="dashboard" />
                     <IconButton Component={Plus} title="create" />
-                    <IconButton Component={UploadIcon} title="upload json"/>
+                    <IconButton Component={EditIcon} title="create-deck"/>
                 </div>
 
                 {/* Bottom section of the navigation bar */}
