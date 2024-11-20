@@ -1,11 +1,10 @@
-import sql, {checkUser} from "../../database/database.js";
+import sql from "../../database/database.js";
 import generateTokenAndCookie from "../../utils/generateTokenAndCookie.js";
 import bcrypt from "bcryptjs";
 export default async function login(req, res) {
     try {
         const {username,email, password} = req.body;
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
 
 

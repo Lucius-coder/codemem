@@ -1,5 +1,5 @@
 import IconButton from "./IconButton.jsx";
-import {EditIcon, Home, Plus, UploadIcon, UserRoundCogIcon} from "lucide-react";
+import {EditIcon, Home, Plus, UserRoundCogIcon} from "lucide-react";
 
 // The Navbar component definition
 const Navbar = () => {
